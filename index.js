@@ -48,5 +48,4 @@ function copyToClipboard(i) {
     navigator.clipboard.writeText(password.textContent).then(res=>{
         alert("Copied to clipboard");
      });
-    
 }
