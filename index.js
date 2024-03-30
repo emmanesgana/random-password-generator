@@ -9,6 +9,7 @@ let pwFourEl = document.getElementById("pw-four");
 
 let slider = document.getElementById("slider-range");
 let sliderNumber = document.getElementById("slider-number");
+
 sliderNumber.textContent = slider.value;
 slider.oninput = function() {
     sliderNumber.textContent= this.value;
@@ -42,8 +43,8 @@ pwTwoEl.addEventListener("click", copyToClipboard)
 pwThreeEl.addEventListener("click", copyToClipboard)
 pwFourEl.addEventListener("click", copyToClipboard)
 
-function copyToClipboard(e) {
-    let password = e.target;
+function copyToClipboard(i) {
+    let password = i.target;
     navigator.clipboard.writeText(password.textContent).then(res=>{
         alert("Copied to clipboard");
      });
